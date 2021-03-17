@@ -1,0 +1,21 @@
+:root{
+    --moderate-violet: #7541c8;
+    --Very-dark-grayish-blue: #48556a;
+    --very-dark-blackish-blue: #19212e;
+    --white: #ffffff;
+  
+    --light-gray: #cfcfcf;
+    --light-grayish-blue: #ecf2f8;
+
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 0.8125;
+    overflow-x: hidden;
+    background-color: var(--light-grayish-blue);
+}
