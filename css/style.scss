@@ -31,9 +31,8 @@ body {
 }
 
 .testimonials {
-  
-     @media screen and (min-width: 50rem) {
-      display: grid;
+  @media screen and (min-width: 50rem) {
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     height: 100%;
@@ -47,14 +46,11 @@ body {
     padding: 1.625rem 2rem;
     box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.247378);
     border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
 
-   
-      margin-bottom: 1.5rem;
-
-      @media only screen and(min-width: 50rem){
-        margin-bottom: 0rem;
-      }
-    
+    @media only screen and(min-width: 50rem) {
+      margin-bottom: 0rem;
+    }
 
     .highlighted {
       font-size: 1.25rem;
