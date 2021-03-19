@@ -1,6 +1,6 @@
 :root {
   --moderate-violet: #7541c8;
-  --Very-dark-grayish-blue: #48556a;
+  --very-dark-grayish-blue: #48556a;
   --very-dark-blackish-blue: #19212e;
   --white: #ffffff;
   --light-gray: #cfcfcf;
@@ -9,6 +9,7 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
@@ -16,6 +17,53 @@ body {
   font-size: 0.8125;
   overflow-x: hidden;
   background-color: var(--light-grayish-blue);
+}
+
+.testimonials {
+  margin: 4.4375rem 1.5rem;
+}
+@media screen and (min-width: 800px) {
+  .testimonials {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 100%;
+    grid-gap: 1rem;
+  }
+}
+
+.small {
+  grid-row: span 1;
+  grid-column: span 1;
+}
+
+.medium--landscape {
+  grid-row: span 1;
+  grid-column: span 2;
+}
+
+.medium--portrait {
+  grid-row: span 2;
+  grid-column: span 1;
+}
+
+.violet {
+  background-color: var(--moderate-violet);
+  color: var(--white);
+}
+
+.gray {
+  background-color: var(--very-dark-grayish-blue);
+  color: white;
+}
+
+.white {
+  background-color: white;
+}
+
+.black {
+  background-color: var(--very-dark-blackish-blue);
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
