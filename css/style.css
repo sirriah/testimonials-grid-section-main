@@ -19,17 +19,86 @@ body {
   background-color: var(--light-grayish-blue);
 }
 
-.testimonials {
+.main-content {
   margin: 4.4375rem 1.5rem;
+  max-width: 100%;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 50rem) {
+  .main-content {
+    max-width: 68.75rem;
+    margin: 10.3125rem auto;
+  }
+}
+
+@media screen and (min-width: 50rem) {
   .testimonials {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     height: 100%;
-    grid-gap: 1rem;
+    grid-gap: 1.875rem;
+    grid-template-areas: "violet violet gray white-long" "white-small black black white-long";
   }
+}
+.testimonials__item {
+  padding: 1.625rem 2rem;
+  box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.247378);
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+@media only screen and (min-width: 50rem) {
+  .testimonials__item {
+    margin-bottom: 0rem;
+  }
+}
+.testimonials__item .highlighted {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.testimonials__item .normal {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 500;
+  opacity: 0.7;
+}
+.testimonials__item:nth-child(1) {
+  grid-area: violet;
+}
+.testimonials__item:nth-child(2) {
+  grid-area: gray;
+}
+.testimonials__item:nth-child(3) {
+  grid-area: white-small;
+}
+.testimonials__item:nth-child(4) {
+  grid-area: black;
+}
+.testimonials__item:nth-child(5) {
+  grid-area: white-long;
+}
+
+.profile {
+  display: flex;
+  margin-bottom: 1.125rem;
+}
+.profile__image {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+.profile__name {
+  font-size: 0.8125rem;
+  line-height: 0.8125rem;
+  font-weight: 500;
+}
+.profile__status {
+  font-size: 0.6875rem;
+  opacity: 0.5;
+  line-height: 0.6875rem;
+  font-weight: 500;
 }
 
 .small {
@@ -50,6 +119,18 @@ body {
 .violet {
   background-color: var(--moderate-violet);
   color: var(--white);
+  background-image: url("../images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: 95% 0%;
+}
+@media only screen and (min-width: 50rem) {
+  .violet {
+    background-position: 85% 0%;
+  }
+}
+.violet .profile__image {
+  box-sizing: content-box;
+  border: 2px solid #a775f1;
 }
 
 .gray {
@@ -59,11 +140,16 @@ body {
 
 .white {
   background-color: white;
+  color: var(--very-dark-grayish-blue);
 }
 
 .black {
   background-color: var(--very-dark-blackish-blue);
   color: white;
+}
+.black .profile__image {
+  box-sizing: content-box;
+  border: 2px solid #733fc8;
 }
 
 /*# sourceMappingURL=style.css.map */
